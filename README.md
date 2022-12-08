@@ -8,7 +8,7 @@ let's  talk about how the process of building that classifier took place from th
 
 
 
-## Dataset Used 
+## Dataset used 
 You can [download the dataset](https://drive.google.com/drive/folders/1h9wmnJNrNKNOJXsls11txNx3C2qJblAs) form here, it's 254 RGB images of size 256*256,
 then for faster training the following pre-processing is done on data : 
 
@@ -18,11 +18,11 @@ then for faster training the following pre-processing is done on data :
      c) Dividing the data into batches, each  batch is 32 images
 
  
-   - spliting dataset 
+   - Spliting dataset 
 
-    a)training data (70 % of the data set )  
-    b) validation data ( 10% of the  dataset ) 
-    c) testing data (20%of the  dataset )   
+    a)Training data (70 % of the data set )  
+    b) Validation data ( 10% of the  dataset ) 
+    c) Testing data (20% of the  dataset )   
 
 
 
@@ -35,19 +35,26 @@ We used the sequential model, as it's the simplest and best model for a single i
 - Important hyperparameters  :  
   -For the pooling layer, padding is applied to allow further convolutional operations if needed, and stride(s = 2 )    
   -For the convolutional and fully connected layers, the activation function used is "Relu" except for the final layer, the used activation function is "sigmoid ". 
-  -Here thier is no need for a drop out layer as thier is no overfitting 
- - Track the loss and accuracy on the validation set to determine the best hyperparameters   
+
+  -Here thier is no need for a drop out layer as thier is no overfitting .
+ - Track the loss and accuracy on the validation dataset to determine the best hyperparameters   
  
 ## Classifier training  
 Keras.fit() is the method used for the model training on the data set for the specified number of fixed epochs or iterations mentioned
- - epochs here are 20 epochs.    
+ - Epochs here are 20 epochs.    
 ## Sanity checking 
 Even if the validation accuracy is high, it's better to check other evaluation matrices as precision, recall, and binary accuracy.
 
 
+![Screenshot (157)](https://user-images.githubusercontent.com/71048834/206542080-57933030-e3a5-4ec4-acb0-c3d62bc16c1e.png)
+
+![Screenshot (158)](https://user-images.githubusercontent.com/71048834/206542137-01efbca7-ddae-49b2-b379-14f1dd53540c.png)
 
 ## Testing 
 Finally, we tested the classifier to check everything makes sense, the testing data also should be scaled to be compatible with  the size of the training data 
 
+ ![Screenshot (162)](https://user-images.githubusercontent.com/71048834/206542201-5d197702-deb6-4af6-ae32-5024e421f069.png)
 
 
+
+![Screenshot (164)](https://user-images.githubusercontent.com/71048834/206542218-f4d64747-f63e-4318-ae61-0519d7468df5.png)

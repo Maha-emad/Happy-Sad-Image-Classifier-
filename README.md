@@ -1,5 +1,5 @@
 
-# Happy Sad Classifier
+# Happy/Sad Classifier
 
 We have built a classifier for happy and sad images using a convolutional neural network, where such a model could be used in emotional detection applications like video games, psychological diagnosis, and employment safety applications .
 
